@@ -1,8 +1,17 @@
-import React from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import Landing from './Pages/Landing';
 
-function App() {
-  return <div className="App">yo</div>;
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'React',
+    };
+  }
+
+  render() {
+    return <Landing />;
+  }
 }
 
 export default App;
