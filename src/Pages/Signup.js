@@ -21,7 +21,7 @@ import {
 } from 'reactstrap';
 import Header from '../Components/Navbar/Navbar';
 
-class Login extends React.Component {
+class Signup extends React.Component {
   state = {};
   render() {
     return (
@@ -53,8 +53,8 @@ class Login extends React.Component {
                   Bootstrap 4 Design System.
                 </p>
                 <div className='btn-wrapper'>
-                  <Button color='success' to='/signup' tag={Link}>
-                    Signup Page
+                  <Button color='success' to='/login' tag={Link}>
+                    Login Page
                   </Button>
                 </div>
               </Col>
@@ -101,6 +101,16 @@ class Login extends React.Component {
                         <small>Or sign in with credentials</small>
                       </div>
                       <Form role='form'>
+                        <FormGroup>
+                          <InputGroup className='input-group-alternative mb-3'>
+                            <InputGroupAddon addonType='prepend'>
+                              <InputGroupText>
+                                <i className='ni ni-hat-3' />
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder='Name' type='text' />
+                          </InputGroup>
+                        </FormGroup>
                         <FormGroup
                           className={classnames('mb-3', {
                             focused: this.state.emailFocused,
@@ -196,4 +206,17 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Signup;
+
+{
+  /* <FormGroup>
+                          <InputGroup className='input-group-alternative mb-3'>
+                            <InputGroupAddon addonType='prepend'>
+                              <InputGroupText>
+                                <i className='ni ni-hat-3' />
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder='Name' type='text' />
+                          </InputGroup>
+                        </FormGroup> */
+}

@@ -1,15 +1,27 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import App from '../App';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Landing from '../Pages/Landing';
+import Login from '../Pages/Login';
+import Signup from '../Pages/Signup';
 
-class ReactRouter extends React.Component {
+class Routes extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'React',
+    };
+  }
   render() {
     return (
-      <React.Fragment>
-        <Route exact path='/' component={App} />
-      </React.Fragment>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/signup' component={Signup} />
+        </Switch>
+      </Router>
     );
   }
 }
 
-export default ReactRouter;
+export default Routes;
