@@ -28,7 +28,7 @@ class Signup extends React.Component {
       <>
         <section className='section section-lg section-shaped'>
           <Header />
-          <div className='shape shape-style-1 shape-default'>
+          <div className='shape shape-style-1 shape-primary'>
             <span />
             <span />
             <span />
@@ -207,16 +207,3 @@ class Signup extends React.Component {
 }
 
 export default Signup;
-
-{
-  /* <FormGroup>
-                          <InputGroup className='input-group-alternative mb-3'>
-                            <InputGroupAddon addonType='prepend'>
-                              <InputGroupText>
-                                <i className='ni ni-hat-3' />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input placeholder='Name' type='text' />
-                          </InputGroup>
-                        </FormGroup> */
-}

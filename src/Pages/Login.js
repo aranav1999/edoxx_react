@@ -28,7 +28,7 @@ class Login extends React.Component {
       <>
         <section className='section section-lg section-shaped'>
           <Header />
-          <div className='shape shape-style-1 shape-default'>
+          <div className='shape shape-style-1 shape-dark'>
             <span />
             <span />
             <span />
