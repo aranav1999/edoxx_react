@@ -341,9 +341,9 @@
     &.shape-dark {
       background: linear-gradient(
         150deg,
-        shapes-dark-color('step-1-gradient-bg') 15%,
-        shapes-dark-color('step-2-gradient-bg') 70%,
-        shapes-dark-color('step-3-gradient-bg') 94%
+        #38304d 15%,
+        #4d416e 70%,
+        #38304d 94%
       );
     }
   }

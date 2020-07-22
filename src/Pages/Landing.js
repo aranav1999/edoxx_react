@@ -1,6 +1,7 @@
 import React from 'react';
 // nodejs library that concatenates classes
 import classnames from 'classnames';
+import illustration from '../images/coding.svg';
 
 // reactstrap components
 import {
@@ -48,13 +49,15 @@ class Landing extends React.Component {
                 <span />
                 <span />
               </div>
-              <Container className='py-lg-md d-flex'>
+              <Container
+                style={{ marginTop: '3rem', marginBottom: '-80px' }}
+                className='py-lg-md d-flex'
+              >
                 <div className='col px-0'>
-                  <Row style={{ marginTop: '3rem', marginBottom: '2rem' }}>
+                  <Row>
                     <Col lg='6'>
                       <h1 className='display-3 text-white'>
-                        A beautiful Design System{' '}
-                        <span>completed with examples</span>
+                        Sign Up Now To Get<span>first month FREE</span>
                       </h1>
                       <p className='lead text-white'>
                         The design system comes with four pre-built pages to
@@ -63,27 +66,30 @@ class Landing extends React.Component {
                       </p>
                       <div className='btn-wrapper'>
                         <Button
-                          className='btn-icon mb-3 mb-sm-0'
-                          color='info'
+                          className=' btn-icon'
+                          color='success'
                           href='#'
+                          target='_blank'
                         >
                           <span className='btn-inner'></span>
-                          <span className='btn-inner--text'>Login</span>
+                          <span className='btn-inner--text ml-1'>
+                            Book your Demo
+                          </span>
                         </Button>
-                        <Button
-                          className='btn-white btn-icon mb-3 mb-sm-0 ml-1'
-                          color='default'
-                          href='#'
-                        >
-                          <span className='btn-inner'></span>
-                          <span className='btn-inner--text'>Sign Up</span>
-                        </Button>
+                      </div>
+                    </Col>
+                    <Col lg='6'>
+                      <div>
+                        <img
+                          className='img-fluid floating'
+                          src={illustration}
+                          alt='...'
+                        ></img>
                       </div>
                     </Col>
                   </Row>
                 </div>
               </Container>
-              {/* SVG separator */}
               <div className='separator separator-bottom separator-skew'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -102,7 +108,7 @@ class Landing extends React.Component {
             </section>
             {/* 1st Hero Variation */}
           </div>
-          <section className='section section-lg pt-lg-0 mt--200'>
+          {/* <section className='section section-lg pt-lg-0 mt--200'>
             <Container>
               <Row className='justify-content-center'>
                 <Col lg='12'>
@@ -219,7 +225,7 @@ class Landing extends React.Component {
                 </Col>
               </Row>
             </Container>
-          </section>
+          </section> */}
           <section className='section section-lg'>
             <Container>
               <Row className='row-grid align-items-center'>
@@ -485,17 +491,17 @@ class Landing extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col className='mb-5 mb-lg-0' lg='3' md='6'>
+                <Col className='mb-5 mb-lg-0' lg='4' md='6'>
                   <div className='px-4'>
                     <img
                       alt='...'
                       className='rounded-circle img-center img-fluid shadow shadow-lg--hover'
-                      src={require('../assets/img/theme/team-1-800x800.jpg')}
+                      src={require('../images/bhuwan.jpg')}
                       style={{ width: '200px' }}
                     />
                     <div className='pt-4 text-center'>
                       <h5 className='title'>
-                        <span className='d-block mb-1'>Ryan Tompson</span>
+                        <span className='d-block mb-1'>Bhuwan Tyagi</span>
                         <small className='h6 text-muted'>Web Developer</small>
                       </h5>
                       <div className='mt-3'>
@@ -527,20 +533,18 @@ class Landing extends React.Component {
                     </div>
                   </div>
                 </Col>
-                <Col className='mb-5 mb-lg-0' lg='3' md='6'>
+                <Col className='mb-5 mb-lg-0' lg='4' md='6'>
                   <div className='px-4'>
                     <img
                       alt='...'
                       className='rounded-circle img-center img-fluid shadow shadow-lg--hover'
-                      src={require('../assets/img/theme/team-2-800x800.jpg')}
+                      src={require('../images/yash.jpeg')}
                       style={{ width: '200px' }}
                     />
                     <div className='pt-4 text-center'>
                       <h5 className='title'>
-                        <span className='d-block mb-1'>Romina Hadid</span>
-                        <small className='h6 text-muted'>
-                          Marketing Strategist
-                        </small>
+                        <span className='d-block mb-1'>Yash Pasari</span>
+                        <small className='h6 text-muted'>Product Manager</small>
                       </h5>
                       <div className='mt-3'>
                         <Button
@@ -571,17 +575,17 @@ class Landing extends React.Component {
                     </div>
                   </div>
                 </Col>
-                <Col className='mb-5 mb-lg-0' lg='3' md='6'>
+                <Col className='mb-5 mb-lg-0' lg='4' md='6'>
                   <div className='px-4'>
                     <img
                       alt='...'
                       className='rounded-circle img-center img-fluid shadow shadow-lg--hover'
-                      src={require('../assets/img/theme/team-3-800x800.jpg')}
+                      src={require('../images/aranav.jfif')}
                       style={{ width: '200px' }}
                     />
                     <div className='pt-4 text-center'>
                       <h5 className='title'>
-                        <span className='d-block mb-1'>Alexander Smith</span>
+                        <span className='d-block mb-1'>Aranav Jindal</span>
                         <small className='h6 text-muted'>UI/UX Designer</small>
                       </h5>
                       <div className='mt-3'>
@@ -604,48 +608,6 @@ class Landing extends React.Component {
                         <Button
                           className='btn-icon-only rounded-circle ml-1'
                           color='info'
-                          href='#pablo'
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className='fa fa-dribbble' />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col className='mb-5 mb-lg-0' lg='3' md='6'>
-                  <div className='px-4'>
-                    <img
-                      alt='...'
-                      className='rounded-circle img-center img-fluid shadow shadow-lg--hover'
-                      src={require('../assets/img/theme/team-4-800x800.jpg')}
-                      style={{ width: '200px' }}
-                    />
-                    <div className='pt-4 text-center'>
-                      <h5 className='title'>
-                        <span className='d-block mb-1'>John Doe</span>
-                        <small className='h6 text-muted'>Founder and CEO</small>
-                      </h5>
-                      <div className='mt-3'>
-                        <Button
-                          className='btn-icon-only rounded-circle'
-                          color='success'
-                          href='#pablo'
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className='fa fa-twitter' />
-                        </Button>
-                        <Button
-                          className='btn-icon-only rounded-circle ml-1'
-                          color='success'
-                          href='#pablo'
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className='fa fa-facebook' />
-                        </Button>
-                        <Button
-                          className='btn-icon-only rounded-circle ml-1'
-                          color='success'
                           href='#pablo'
                           onClick={(e) => e.preventDefault()}
                         >
