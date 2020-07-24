@@ -18,18 +18,48 @@ import {
   Container,
   Row,
   Col,
+  UncontrolledCarousel,
+  Modal,
+  Form,
 } from 'reactstrap';
 
 // core components
 import Header from '../Components/Navbar/Navbar';
 
+const items = [
+  {
+    src: require('../images/markz.png'),
+    altText: '',
+    caption: '',
+    header: '',
+  },
+  {
+    src: require('../images/billg.png'),
+    altText: '',
+    caption: '',
+    header: '',
+  },
+  {
+    src: require('../images/pichai.png'),
+    altText: '',
+    caption: '',
+    header: '',
+  },
+  {
+    src: require('../images/musk.png'),
+    altText: '',
+    caption: '',
+    header: '',
+  },
+];
+
 class Landing extends React.Component {
   state = {};
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
+  toggleModal = (state) => {
+    this.setState({
+      [state]: !this.state[state],
+    });
+  };
   render() {
     return (
       <>
@@ -68,14 +98,104 @@ class Landing extends React.Component {
                         <Button
                           className=' btn-icon'
                           color='success'
-                          href='#'
-                          target='_blank'
+                          type='button'
+                          onClick={() => this.toggleModal('formModal')}
                         >
-                          <span className='btn-inner'></span>
-                          <span className='btn-inner--text ml-1'>
-                            Book your Demo
-                          </span>
+                          Book your Demo
                         </Button>
+                        <Modal
+                          className='modal-dialog-centered'
+                          size='sm'
+                          isOpen={this.state.formModal}
+                          toggle={() => this.toggleModal('formModal')}
+                        >
+                          <div className='modal-body p-0'>
+                            <Card className='bg-secondary shadow border-0'>
+                              <CardBody className='px-lg-5 py-lg-5'>
+                                <div className='text-center text-muted mb-4'>
+                                  <small>Enter Your Credentials</small>
+                                </div>
+                                <Form role='form'>
+                                  <FormGroup
+                                    className={classnames('mb-3', {
+                                      focused: this.state.emailFocused,
+                                    })}
+                                  >
+                                    <InputGroup className='input-group-alternative'>
+                                      <InputGroupAddon addonType='prepend'>
+                                        <InputGroupText>
+                                          <i className='ni ni-email-83' />
+                                        </InputGroupText>
+                                      </InputGroupAddon>
+                                      <Input
+                                        placeholder='Email'
+                                        type='email'
+                                        onFocus={(e) =>
+                                          this.setState({ emailFocused: true })
+                                        }
+                                        onBlur={(e) =>
+                                          this.setState({ emailFocused: false })
+                                        }
+                                      />
+                                    </InputGroup>
+                                  </FormGroup>
+                                  <FormGroup
+                                    className={classnames({
+                                      focused: this.state.passwordFocused,
+                                    })}
+                                  >
+                                    <InputGroup className='input-group-alternative'>
+                                      <InputGroupAddon addonType='prepend'>
+                                        <InputGroupText>
+                                          <i className='ni ni-lock-circle-open' />
+                                        </InputGroupText>
+                                      </InputGroupAddon>
+                                      <Input
+                                        placeholder='Password'
+                                        type='password'
+                                        autoComplete='off'
+                                        onFocus={(e) =>
+                                          this.setState({
+                                            passwordFocused: true,
+                                          })
+                                        }
+                                        onBlur={(e) =>
+                                          this.setState({
+                                            passwordFocused: false,
+                                          })
+                                        }
+                                      />
+                                    </InputGroup>
+                                  </FormGroup>
+                                  <div className='custom-control custom-control-alternative custom-checkbox'>
+                                    <input
+                                      className='custom-control-input'
+                                      id=' customCheckLogin'
+                                      type='checkbox'
+                                    />
+                                    <label
+                                      className='custom-control-label'
+                                      htmlFor=' customCheckLogin'
+                                    >
+                                      <span className='text-muted'>
+                                        Remember me
+                                      </span>
+                                    </label>
+                                  </div>
+                                  <div className='text-center'>
+                                    <Button
+                                      className='my-4'
+                                      color='primary'
+                                      type='button'
+                                    >
+                                      Sign in
+                                    </Button>
+                                  </div>
+                                </Form>
+                              </CardBody>
+                            </Card>
+                          </div>
+                        </Modal>
                       </div>
                     </Col>
                     <Col lg='6'>
@@ -108,7 +228,35 @@ class Landing extends React.Component {
             </section>
             {/* 1st Hero Variation */}
           </div>
-          {/* <section className='section section-lg pt-lg-0 mt--200'>
+
+          <section className='section section-lg'>
+            <Container>
+              <Row className='row-grid align-items-center'>
+                <Col className='mb-lg-auto' md='7'>
+                  <div className='rounded shadow-lg overflow-hidden transform-perspective-left'>
+                    <UncontrolledCarousel items={items} />
+                  </div>
+                </Col>
+                <Col className='order-md-2' md='5'>
+                  <h2 className='text-warning font-weight-bold'>
+                    Why Coding Is Important For Young Minds
+                  </h2>
+                  <img
+                    alt='...'
+                    className='img-fluid floating'
+                    src={require('../images/child.gif')}
+                  />
+                </Col>
+              </Row>
+            </Container>
+          </section>
+          <section
+            style={{ paddingTop: '-4rem' }}
+            className='section section-lg'
+          >
+            <h1 className='text-dark text-center font-weight-bold'>
+              Course Plan
+            </h1>
             <Container>
               <Row className='justify-content-center'>
                 <Col lg='12'>
@@ -222,83 +370,6 @@ class Landing extends React.Component {
                       </Card>
                     </Col>
                   </Row>
-                </Col>
-              </Row>
-            </Container>
-          </section> */}
-          <section className='section section-lg'>
-            <Container>
-              <Row className='row-grid align-items-center'>
-                <Col className='order-md-2' md='6'>
-                  <img
-                    alt='...'
-                    className='img-fluid floating'
-                    src={require('../assets/img/theme/promo-1.png')}
-                  />
-                </Col>
-                <Col className='order-md-1' md='6'>
-                  <div className='pr-md-5'>
-                    <div className='icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5'>
-                      <i className='ni ni-settings-gear-65' />
-                    </div>
-                    <h3>Awesome features</h3>
-                    <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
-                    </p>
-                    <ul className='list-unstyled mt-5'>
-                      <li className='py-2'>
-                        <div className='d-flex align-items-center'>
-                          <div>
-                            <Badge
-                              className='badge-circle mr-3'
-                              color='success'
-                            >
-                              <i className='ni ni-settings-gear-65' />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className='mb-0'>
-                              Carefully crafted components
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className='py-2'>
-                        <div className='d-flex align-items-center'>
-                          <div>
-                            <Badge
-                              className='badge-circle mr-3'
-                              color='success'
-                            >
-                              <i className='ni ni-html5' />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className='mb-0'>Amazing page examples</h6>
-                          </div>
-                        </div>
-                      </li>
-                      <li className='py-2'>
-                        <div className='d-flex align-items-center'>
-                          <div>
-                            <Badge
-                              className='badge-circle mr-3'
-                              color='success'
-                            >
-                              <i className='ni ni-satisfied' />
-                            </Badge>
-                          </div>
-                          <div>
-                            <h6 className='mb-0'>
-                              Super friendly support team
-                            </h6>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
                 </Col>
               </Row>
             </Container>
