@@ -215,18 +215,22 @@ class Header extends React.Component {
                     </UncontrolledTooltip>
                   </NavItem>
                   <NavItem className='d-none d-lg-block ml-lg-4'>
-                    <Button className='mb-3 mb-sm-0' href='#' color='success'>
-                      <span className='btn-inner'></span>
-                      <span className='btn-inner--text'>Login</span>
-                    </Button>
-                    <Button
-                      className='btn-white mb-3 mb-sm-0 ml-1'
-                      color='default'
-                      href='#'
-                    >
-                      <span className='btn-inner'></span>
-                      <span className='btn-inner--text'>Sign Up</span>
-                    </Button>
+                    <Link to='/login'>
+                      <Button className='mb-3 mb-sm-0' href='#' color='success'>
+                        <span className='btn-inner'></span>
+                        <span className='btn-inner--text'>Login</span>
+                      </Button>
+                    </Link>
+                    <Link to='/signup'>
+                      <Button
+                        className='btn-white mb-3 mb-sm-0 ml-1'
+                        color='default'
+                        href='#'
+                      >
+                        <span className='btn-inner'></span>
+                        <span className='btn-inner--text'>Sign Up</span>
+                      </Button>
+                    </Link>
                   </NavItem>
                 </Nav>
               </UncontrolledCollapse>
