@@ -331,26 +331,23 @@ class Landing extends React.Component {
                     </div>
                     <h3>Our customers</h3>
                     <p className='lead'>
-                      Don't let your uses guess by attaching tooltips and
-                      popoves to any element. Just make sure you enable them
-                      first via JavaScript.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                     </p>
                     <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </p>
                     <a
                       className='font-weight-bold text-warning mt-5'
                       href='#pablo'
                       onClick={(e) => e.preventDefault()}
                     >
-                      A beautiful UI Kit for impactful websites
+                      A way to mould young minds
                     </a>
                   </div>
                 </Col>
@@ -405,10 +402,8 @@ class Landing extends React.Component {
                             Awesome Support
                           </h5>
                           <p>
-                            The Arctic Ocean freezes every winter and much of
-                            the sea-ice then thaws every summer, and that
-                            process will continue whatever.
-                          </p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua.                          </p>
                           <a
                             className='text-success'
                             href='#pablo'
@@ -433,9 +428,7 @@ class Landing extends React.Component {
                             Modular Components
                           </h5>
                           <p>
-                            The Arctic Ocean freezes every winter and much of
-                            the sea-ice then thaws every summer, and that
-                            process will continue whatever.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                           </p>
                           <a
                             className='text-warning'
@@ -475,9 +468,8 @@ class Landing extends React.Component {
                 <Col lg='8'>
                   <h2 className='display-3'>The amazing Team</h2>
                   <p className='lead text-muted'>
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record maximum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua.
                   </p>
                 </Col>
               </Row>
@@ -618,12 +610,11 @@ class Landing extends React.Component {
                   <Row className='align-items-center'>
                     <Col lg='8'>
                       <h3 className='text-white'>
-                        We made website building easier for you.
+                        We make learning easier for you.
                       </h3>
                       <p className='lead text-white mt-3'>
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                          incididunt ut labore et dolore magna aliqua.
                       </p>
                     </Col>
                     <Col className='ml-lg-auto' lg='3'>
@@ -631,10 +622,10 @@ class Landing extends React.Component {
                         block
                         className='btn-white'
                         color='default'
-                        href='https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page'
+                        href='#'
                         size='lg'
                       >
-                        Download React
+                        Download Brochure
                       </Button>
                     </Col>
                   </Row>
@@ -648,10 +639,8 @@ class Landing extends React.Component {
                 <Col lg='10'>
                   <h2 className='display-3 text-white'>Build something</h2>
                   <p className='lead text-white'>
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record low maximum sea ice extent tihs year down
-                    to low ice.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua.
                   </p>
                 </Col>
               </Row>
@@ -662,8 +651,8 @@ class Landing extends React.Component {
                   </div>
                   <h5 className='text-white mt-3'>Building tools</h5>
                   <p className='text-white mt-3'>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua.
                   </p>
                 </Col>
                 <Col lg='4'>
@@ -672,8 +661,8 @@ class Landing extends React.Component {
                   </div>
                   <h5 className='text-white mt-3'>Grow your market</h5>
                   <p className='text-white mt-3'>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua.
                   </p>
                 </Col>
                 <Col lg='4'>
@@ -682,8 +671,8 @@ class Landing extends React.Component {
                   </div>
                   <h5 className='text-white mt-3'>Launch time</h5>
                   <p className='text-white mt-3'>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                      incididunt ut labore et dolore magna aliqua.
                   </p>
                 </Col>
               </Row>
@@ -711,9 +700,9 @@ class Landing extends React.Component {
                 <Col lg='8'>
                   <Card className='bg-gradient-secondary shadow'>
                     <CardBody className='p-lg-5'>
-                      <h4 className='mb-1'>Want to work with us?</h4>
+                      <h4 className='mb-1'>Want to reach out?</h4>
                       <p className='mt-0'>
-                        Your project is very important to us.
+                        Your future is very important to us.
                       </p>
                       <FormGroup
                         className={classnames('mt-5', {
